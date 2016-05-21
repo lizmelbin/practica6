@@ -11,6 +11,7 @@ package controladores;
  */
 public class Etiqueta {
 
+  //test para ver si se sube a git
     private long id;
     private String etiqueta;
 
