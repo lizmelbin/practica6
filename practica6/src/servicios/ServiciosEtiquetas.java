@@ -127,7 +127,7 @@ public class ServiciosEtiquetas {
      Etiqueta respueta= new Etiqueta();
             
         try {
-             con = GeneralBaseDeDatos.setConexion() ;
+            
             String query = "select id,etiqueta from etiqueta where etiqueta=? limit 1";
            
             //

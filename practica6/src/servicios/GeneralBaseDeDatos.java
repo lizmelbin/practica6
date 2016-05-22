@@ -18,7 +18,7 @@ import java.util.logging.Logger;
 public class GeneralBaseDeDatos {
     public static Connection con = null;
     public static Connection setConexion(){
-        String url = "jdbc:h2:tcp://localhost/~/practica6";
+        String url = "jdbc:h2:tcp://localhost/~/test";
         
         try {
             con = DriverManager.getConnection(url, "sa", "");

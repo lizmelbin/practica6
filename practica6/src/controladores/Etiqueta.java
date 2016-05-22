@@ -16,7 +16,9 @@ public class Etiqueta {
     private String etiqueta;
 
     public Etiqueta(String etiqueta) {
-
+        if(!verificarSiSePuedeInsertar(etiqueta)){
+            
+        }
         this.etiqueta = etiqueta;
         servicios.ServiciosEtiquetas.inserEtiqueta(this);
 
@@ -40,6 +42,16 @@ public class Etiqueta {
 
     public void setEtiqueta(String etiqueta) {
         this.etiqueta = etiqueta;
+    }
+
+    /**
+     * Verifica en la BD si ya existe una etiqeuta con este label
+     * @param etiqueta1
+     * @return 
+     */
+    private boolean verificarSiSePuedeInsertar(String etiqueta1) {
+        Etiqueta e=servicios.ServiciosEtiquetas.getEtiqueta(etiqueta);
+        return e.getEtiqueta()!=null;
     }
 
 }
